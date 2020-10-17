@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import { Container, Row, Col } from 'reactstrap';
 // import './App.css';
-
+import Table from './components/Table'
 
 class App extends React.Component {
   render() {
