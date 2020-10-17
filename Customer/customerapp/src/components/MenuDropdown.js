@@ -8,8 +8,9 @@ class MenuDropdown extends React.Component{
         super(props)
         this.toggle = this.toggle.bind(this);
         this.handleChange = this.handleChange.bind(this)
+        this.getActive = this.getActive.bind(this)
         this.state = {dropdownOpen: false};
-        this.state = {active: ""};
+        this.state = {active: ''};
     }
 
     toggle(){
@@ -22,9 +23,13 @@ class MenuDropdown extends React.Component{
         })
     }
 
+    getActive(){
+        console.log("ruhn")
+        return this.state.active
+    }
+
        render(){
            const dropdownOpen = this.state.dropdownOpen
-        console.log(this.props.options)
         if(this.props.itemDrop == "yes"){
             let options = []
             for(var i = 0; i < this.props.options.length; i++){

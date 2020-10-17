@@ -1,5 +1,6 @@
 import React from 'react';
 import NCR from '../img/NCR.png';
+import githublogo from '../img/github.svg'
 import {
     Navbar,
     NavbarBrand,
@@ -10,14 +11,12 @@ import {
 const NavBar = (props) => {
 
     return ( 
-      <div>
+    <div>
         <Navbar color = "light" light expand = "md" >
-        <NavbarBrand href = "/"
-        color = "" > < img src = { NCR }
-        className = "App-logo"
-        alt = "logo"
-        width = "70px"/> | wable-CX </NavbarBrand> 
-        <NavbarText right = "" > < NavLink href = "https://github.com/MihirBafna/wable" > GitHub </NavLink> </NavbarText >
+                <NavbarBrand style={{ fontSize: "20x" }} href = "/"> < img src = { NCR } className = "App-logo" alt = "logo"
+                    width="70px" /> | wable<NavbarText style={{color:"#5DB2B2", fontSize:"20x"}} >-RX</NavbarText></NavbarBrand> 
+                <NavbarBrand className="ml-auto" href="https://github.com/MihirBafna/wable"><img src={githublogo} className="App-logo" alt="logo"
+            width="30px" /></NavbarBrand>
         </Navbar> 
         </div>
     );

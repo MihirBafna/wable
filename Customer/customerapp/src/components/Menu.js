@@ -24,6 +24,7 @@ class Menu extends React.Component {
                 <Col></Col>
                 <Col><p>Description</p></Col>
                 <Col style={{textAlign:"right"}}><p>Price</p></Col>
+                <Col xs="1"><p>Qty.</p></Col>
             </Row>
         )
         for(var i = 0; i < lunchList.length; i++) {
