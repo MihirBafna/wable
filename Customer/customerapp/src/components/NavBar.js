@@ -16,7 +16,7 @@ const NavBar = (props) => {
         color = "" > < img src = { NCR }
         className = "App-logo"
         alt = "logo"
-        width = "70px"/> | wable-RX </NavbarBrand> 
+        width = "70px"/> | wable-CX </NavbarBrand> 
         <NavbarText right = "" > < NavLink href = "https://github.com/MihirBafna/wable" > GitHub </NavLink> </NavbarText >
         </Navbar> 
         </div>
