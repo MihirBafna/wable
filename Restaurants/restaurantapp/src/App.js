@@ -16,7 +16,9 @@ class App extends React.Component {
             crossorigin="anonymous" />
         </header>
         <NavBar />
-        
+        <Container>
+          
+        </Container>
       </div>
     );
   }
