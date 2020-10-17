@@ -10,7 +10,8 @@
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "reactstrap": "^8.6.0"
+    "reactstrap": "^8.6.0",
+    "requests": "^0.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
