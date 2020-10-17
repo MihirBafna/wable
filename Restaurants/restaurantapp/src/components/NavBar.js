@@ -7,7 +7,6 @@ import tableview from '../img/tableview.svg'
 import {
     Navbar,
     NavbarBrand,
-    NavLink,
     NavbarText
 } from 'reactstrap';
 
@@ -16,14 +15,14 @@ const NavBar = (props) => {
     return ( 
       <div>
         <Navbar color = "light" light expand = "md" >
-            <NavbarBrand href = "/tableview"> < img src = { NCR } className = "App-logo" alt = "logo"
-                    width="70px" /> | wable<NavbarText style={{color:"#5DB2B2"}} >-RX</NavbarText></NavbarBrand> 
-            <NavbarBrand className="ml-auto" href="/tableview"><img src={tableview} className="App-logo" alt="logo"
-                width="30px" />  </NavbarBrand>
-            <NavbarBrand className="auto" href="/DataAnalytics"> <img src={analytics} className="App-logo" alt="logo"
-                width="30px" /></NavbarBrand>
-                <NavbarBrand className="auto" href="https://github.com/MihirBafna/wable"><img src={githublogo} className="App-logo" alt="logo"
-                width="30px" /></NavbarBrand>
+                <NavbarBrand style={{ fontSize: "20x" }} href = "/tableview"> < img src = { NCR } className = "App-logo" alt = "logo"
+                    width="70px" /> | wable<NavbarText style={{color:"#5DB2B2", fontSize:"20x"}} >-RX</NavbarText></NavbarBrand> 
+            <NavbarBrand className="ml-auto" href="/tableview" style={{ paddingRight: "1vw" }}><img src={tableview} className="App-logo" alt="logo"
+            width="30px" />  </NavbarBrand>
+            <NavbarBrand className="auto" href="/DataAnalytics" style={{ paddingRight: "1vw" }}> <img src={analytics} className="App-logo" alt="logo"
+            width="30px" /></NavbarBrand>
+                <NavbarBrand className="auto" href="https://github.com/MihirBafna/wable" style={{ paddingRight: "2vw" }}><img src={githublogo} className="App-logo" alt="logo"
+            width="30px" /></NavbarBrand>
         </Navbar> 
         </div>
     );
