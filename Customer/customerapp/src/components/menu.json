@@ -7,7 +7,7 @@
             "desc":"",
             "category": "salad",
             "dropdown": "yes",
-            "options": "Broccoli Salad, Pasta, Fruit, Seafood Salad, Juicy Fruit" 
+            "options": ["Broccoli Salad", "Pasta", "Fruit", "Seafood Salad", "Juicy Fruit"]
           },
           {
             "name": "Large Salad",
@@ -15,7 +15,7 @@
             "desc":"",
             "category": "salad",
             "dropdown": "yes",
-            "options": "Broccoli Salad, Pasta, Fruit, Seafood Salad, Juicy Fruit" 
+            "options": ["Broccoli Salad", "Pasta", "Fruit", "Seafood Salad", "Juicy Fruit"] 
           },
           {
               "name": "Small Garden Salad",
@@ -51,7 +51,7 @@
               "desc": "",
               "category": "soup",
               "dropdown": "yes",
-              "options": "Black Bean and Rice, Broccoli Cheese, Brunswick Stew, Chicken Gumbo, Chili, Creamy Potato (contains bacon, French Onion, Vegetarian Vegetable"
+              "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
           },
           {
             "name": "Bowl of Soup",
@@ -59,7 +59,7 @@
             "desc": "",
             "category": "soup",
             "dropdown": "yes",
-            "options": "Black Bean and Rice, Broccoli Cheese, Brunswick Stew, Chicken Gumbo, Chili, Creamy Potato (contains bacon, French Onion, Vegetarian Vegetable"
+            "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
           },
           {
             "name": "Quart of Soup",
@@ -67,7 +67,7 @@
             "desc": "",
             "category": "soup",
             "dropdown": "yes",
-            "options": "Black Bean and Rice, Broccoli Cheese, Brunswick Stew, Chicken Gumbo, Chili, Creamy Potato (contains bacon, French Onion, Vegetarian Vegetable"
+            "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
           },
           {
               "name": "Gallon of Soup",
@@ -75,7 +75,7 @@
               "desc": "",
               "category": "soup",
               "dropdown": "yes",
-              "options": "Black Bean and Rice, Broccoli Cheese, Brunswick Stew, Chicken Gumbo, Chili, Creamy Potato (contains bacon, French Onion, Vegetarian Vegetable"
+              "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
           }
 
         ]
