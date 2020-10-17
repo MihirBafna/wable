@@ -3,9 +3,7 @@ import NavBar from './components/NavBar';
 import MainView from './components/MainView';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from 'react-router-dom';
 
 class App extends React.Component {
@@ -13,7 +11,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <script src="https://d3js.org/d3.v6.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+          <script src="path/to/chartjs/dist/Chart.js"></script>
           <link
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
