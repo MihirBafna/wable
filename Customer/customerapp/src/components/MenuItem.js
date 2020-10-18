@@ -3,6 +3,7 @@ import MenuDropdown from './MenuDropdown'
 import { Container, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter,} from 'reactstrap';
 import '../css/MenuItem.css'
 import Quantity from './Quantity'
+import Add from '../img/addbutton.svg';
 import ModalExample from './Modal'
 import { toggle, buttonLabel, modal, className} from 'react'
 import AddCart from './AddCart'
@@ -10,7 +11,17 @@ import AddCart from './AddCart'
 class MenuItem extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            cartItems: []
+        }
+        this.addItems = this.addItems.bind(this);
+    }
 
+    addItems(itemProps){
+        {this.state.cartItems.map(item => (
+            <MenuItem props={itemProps}></MenuItem>
+        ))}
+        console.log(this.state.cartItems)
     }
     
     render(){
@@ -51,7 +62,7 @@ class MenuItem extends React.Component{
                 <Col id="price"><h5>{this.props.price}</h5></Col>
                 <Quantity />
                 <Col xs={1}>
-                <AddCart price={this.props.price}/>
+                <Button onClick={this.addItems(this.props)}color="link"><img style={{width:"4vh"}} src={Add}></img></Button>
                 </Col>
             </Row> 
             </Container>
