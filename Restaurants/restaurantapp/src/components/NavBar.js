@@ -15,7 +15,7 @@ const NavBar = (props) => {
     return ( 
       <div>
         <Navbar color = "light" light expand = "md" >
-                <NavbarBrand style={{ fontSize: "20x" }} href = "/initialize"> < img src = { NCR } className = "App-logo" alt = "logo"
+                <NavbarBrand style={{ fontSize: "20x" }} href = "/"> < img src = { NCR } className = "App-logo" alt = "logo"
                     width="70px" /> | wable<NavbarText style={{color:"#5DB2B2", fontSize:"20x"}} >-RX</NavbarText></NavbarBrand> 
             <NavbarBrand className="ml-auto" href="/tableview" style={{ paddingRight: "1vw" }}><img src={tableview} className="App-logo" alt="logo"
             width="30px" />  </NavbarBrand>
