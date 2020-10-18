@@ -11,14 +11,13 @@ class App extends React.Component {
   constructor(props){
     super(props)
     var str = this.props.Name;
-    var str = "anfjan7"
     str = str.replace(/[^a-z0-9 ,.?!]/ig, '')
     this.state = {
       restaurantName: str,
       numSeats:this.props.Seats,
       numTables:this.props.Tables,
     }
-    console.log(this.restaurantName)
+    console.log(this.state.restaurantName)
   }
 
   render() {
@@ -35,7 +34,7 @@ class App extends React.Component {
         </header>
         <Router>
           <NavBar />
-          <Route path="/tableview" component={MainView}></Route>
+          <Route path="/tableview" render={() => <MainView name={this.state.restaurantName} seats={this.state.numSeats} tables = {this.state.numTables} /> } />
           {/* <Route path="/DataAnalytics" component={}></Route> */}
         </Router>
       </div>

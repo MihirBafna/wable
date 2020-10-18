@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Container, Jumbotron, Button } from 'reactstrap';
-
+import axios from "axios";
 class InitializeRestaurant extends React.Component {
     constructor(props){
         super(props);
@@ -8,8 +8,26 @@ class InitializeRestaurant extends React.Component {
             Name:"",
             NumTables:NaN,
             NumSeats:NaN,
+            selectedFile: null,
+
         }
     }
+
+    onFileChange = event => {
+
+        this.setState({ selectedFile: event.target.files[0] });
+
+    }; 
+
+    onFileUpload = e => {
+        const fileReader = new FileReader();
+        fileReader.readAsText(e.target.files[0], "UTF-8");
+        fileReader.onload = e => {
+            console.log("e.target.result", e.target.result);
+            this.setState({ selectedFile: e.target.result });
+        };
+    };
+
 
     changeHandlerName=e=>{
         this.setState({Name:e.target.value});
@@ -23,11 +41,32 @@ class InitializeRestaurant extends React.Component {
         this.setState({ NumSeats: parseInt(e.target.value) });
     }
 
+    changeHandlerMenu = e => {
+        this.setState({ NumSeats: parseInt(e.target.value) });
+    }
+
     printRestaurantInfo=()=>{
         console.log(this.state.Name);
         console.log(this.state.NumTables);
         console.log(this.state.NumSeats);
     }
+
+    postToRx(){
+        console.log(this.state.Name);
+        console.log(this.state.NumTables);
+        console.log(this.state.NumSeats);
+
+        axios({
+            method: 'post',
+            url: '/tableview',
+            data: {
+                Name: this.state.Name,
+                Seats: this.state.Seats,
+                Tables: this.state.Tables,
+            }
+        });
+    }
+
     render() {
         return(
             <Container style={{ padding: "5vh" }}>
@@ -47,7 +86,11 @@ class InitializeRestaurant extends React.Component {
                                 <Label for="numSeats">Number of Seats:</Label>
                                     <Input type="number" name="numSeats" id="numSeats" placeholder="Enter the number of seats" value={this.state.NumSeats} onChange={this.changeHandlerSeats} />
                             </FormGroup>
-                            <Button type="submit" onClick={this.printRestaurantInfo} style={{ borderColor: "#5DB2B2", backgroundColor: "#5DB2B2" }}>Submit</Button>
+                            <FormGroup>
+                                <Label for="exampleFile">Select Menu:</Label>
+                                <Input type="file" name="file" id="exampleFile" value={this.state.selectedFile} onChange={this.onFileChange}/>
+                            </FormGroup>
+                            <Button type="submit" onClick={this.postToRx} style={{ borderColor: "#5DB2B2", backgroundColor: "#5DB2B2" }}>Submit</Button>
                         </Form>
                     </Jumbotron>
                 </div>
