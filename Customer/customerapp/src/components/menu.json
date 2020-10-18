@@ -4,7 +4,7 @@
           {
             "name": "Small Salad",
             "price": "1.75",
-            "desc":"",
+            "desc":"Small salad with mixed leafy greens, chopped onions, and tomatoes.",
             "category": "salad",
             "dropdown": "yes",
             "options": ["Broccoli Salad", "Pasta", "Fruit", "Seafood Salad", "Juicy Fruit"]
@@ -12,7 +12,7 @@
           {
             "name": "Large Salad",
             "price": "2.95",
-            "desc":"",
+            "desc":"Large salad with romaine lettuce and up to 5 of the following ingredients of your choice and a dressing: chicken, bacon, parmesean cheese, tomatoes, chopped onions, roasted herbs, cranberries, mixed fruits, feta cheese. ",
             "category": "salad",
             "dropdown": "yes",
             "options": ["Broccoli Salad", "Pasta", "Fruit", "Seafood Salad", "Juicy Fruit"] 
@@ -20,43 +20,43 @@
           {
               "name": "Small Garden Salad",
               "price": "3.35",
-              "desc": "No meat",
+              "desc": "No meat small salad with leafy greens and various mixed vegetables.",
               "category": "salad",
               "dropdown": "no"
           },
           {
               "name": "Large Garden Salad",
               "price": "4.95",
-              "desc": "No meat",
+              "desc": "No meat large salad with leafy greens and various mixed vegetables.",
               "category": "salad",
               "dropdown": "no"
           },
           {
               "name": "3 Scoop Sampler",
               "price": "6.50",
-              "desc": "",
+              "desc": "Large salad with up to three scoops of your choice of chicken salads.",
               "category": "salad",
               "dropdown": "no"
           },
           {
               "name": "Chef Salad",
               "price": "6.95",
-              "desc": "",
+              "desc": "Lettuce, ham, turkey, chicken, tuna, or roast beef, hard-boiled eggs, cucumber, cheese, and tomatoes.",
               "category": "salad",
               "dropdown": "no"
           },
           {
               "name": "Cup of Soup",
               "price": "3.35",
-              "desc": "",
+              "desc": "Small cup of soup of your choosing, warmed to your desire.",
               "category": "soup",
               "dropdown": "yes",
-              "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
+              "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable."]
           },
           {
             "name": "Bowl of Soup",
             "price": "5.60",
-            "desc": "",
+            "desc": "Medium sized cup of soup of your choosing, warmed to your desire.",
             "category": "soup",
             "dropdown": "yes",
             "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
@@ -64,7 +64,7 @@
           {
             "name": "Quart of Soup",
             "price": "10.75",
-            "desc": "",
+            "desc": "Large cup of soup of your choosing, warmed to your desire.",
             "category": "soup",
             "dropdown": "yes",
             "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
@@ -72,7 +72,7 @@
           {
               "name": "Gallon of Soup",
               "price": "38.00",
-              "desc": "",
+              "desc": "Humongous cup of soup of your choosing, warmed to your deepest desire.",
               "category": "soup",
               "dropdown": "yes",
               "options": ["Black Bean and Rice", "Broccoli Cheese","Brunswick Stew", "Chicken Gumbo", "Chili", "Creamy Potato (contains bacon)", "French Onion", "Vegetarian Vegetable"]
