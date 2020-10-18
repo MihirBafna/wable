@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Row, Col } from 'reactstrap';
+import {Row } from 'reactstrap';
 import TableRow from './TableRow'
 
 class TableView extends React.Component {

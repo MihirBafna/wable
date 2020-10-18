@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import MainView from './components/MainView';
+import InitializeRestaurant from './components/InitializeRestaurant';
 import {
   BrowserRouter as Router,
   Route,
@@ -21,6 +22,7 @@ class App extends React.Component {
         </header>
         <Router>
           <NavBar />
+          <Route path="/initialize" component={InitializeRestaurant}></Route>
           <Route path="/tableview" component={MainView}></Route>
           {/* <Route path="/DataAnalytics" component={}></Route> */}
         </Router>
