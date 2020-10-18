@@ -6,12 +6,9 @@ var Base64 = require('crypto-js/enc-base64');
 let sharedKey = "c8abc04534714eb4ab2d884bf1b9f388"
 let secretKey = "923c9543fb2e47538a0ef6faae7c2e75"
 const CalculateAccessKeyCredentials = (request) => {
-    // console.log(request._headers["Date"])
-    // console.log(request.getResponseHeader("nep-organization"))
-    // let requestDateString = request.getResponseHeader("Date")
     console.log(request)
     // Parse date string from HTTP Date header to a native representation
-    let requestDate = request._headers.Date;
+    let requestDate = request._headers["Date"];
     // Generate one-time key to use for HMAC generation
     let key = uniqueKey(requestDate)
 
