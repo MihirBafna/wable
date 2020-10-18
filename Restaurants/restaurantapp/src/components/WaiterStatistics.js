@@ -63,11 +63,13 @@ class WaiterStatistics extends React.Component {
         new Chart(myChartRef, {
             type: "line",
             data: {
-                labels: times,
+                // labels: times,
+                labels: ["9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm"],
                 datasets: [
                     {
                         label: "% Seats Occupied",
-                        data: seatpercentages,
+                        // data: seatpercentages,
+                        data:[10,70,50,60,60,50,70,90,10],
                         backgroundColor: "rgb(93, 178, 178,0.5)",
 
                     }
