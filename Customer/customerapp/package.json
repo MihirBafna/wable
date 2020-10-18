@@ -10,11 +10,13 @@
     "node-fetch": "^2.6.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-payment-inputs": "^1.1.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "reactstrap": "^8.6.0",
     "requests": "^0.3.0",
     "strftime": "^0.10.0",
+    "styled-components": "^5.2.0",
     "xhr2": "^0.2.0"
   },
   "scripts": {

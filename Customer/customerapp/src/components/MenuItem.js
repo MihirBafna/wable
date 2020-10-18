@@ -5,7 +5,7 @@ import '../css/MenuItem.css'
 import Quantity from './Quantity'
 import ModalExample from './Modal'
 import { toggle, buttonLabel, modal, className} from 'react'
-
+import AddCart from './AddCart'
 
 class MenuItem extends React.Component{
     constructor(props){
@@ -19,15 +19,19 @@ class MenuItem extends React.Component{
             <Container fluid>
 
             <Row style={{paddingTop:"5vh"}}>
+                <Col xs={2}>
+                <Row>
                 <Col><p>{this.props.name}</p>
-                
                 </Col>
                 <Col>
                 <MenuDropdown itemDrop={this.props.dropdown || {dropdown:"no"}} options={this.props.options || {options:['']} }>
                 </MenuDropdown>
                 
                 </Col>
-                <Col> <p>{this.props.desc}
+                </Row>
+                </Col>
+                
+                <Col xs={3}> <p>{this.props.desc}
                 <div>
                     <Button color="danger" onClick={toggle}>{"Description"}</Button>
                     <Modal isOpen={modal} toggle={toggle} className={className}>
@@ -46,6 +50,9 @@ class MenuItem extends React.Component{
                 </p></Col>
                 <Col id="price"><h5>{this.props.price}</h5></Col>
                 <Quantity />
+                <Col xs={1}>
+                <AddCart price={this.props.price}/>
+                </Col>
             </Row> 
             </Container>
         );
