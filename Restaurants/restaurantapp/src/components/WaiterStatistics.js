@@ -7,11 +7,6 @@ class WaiterStatistics extends React.Component {
     constructor(props) {
         super(props);
         this.updateTip = this.updateTip.bind(this)
-
-        // this.setState({ totalTip: 0 })
-        // this.setState({ completed: 0 })
-        // this.setState({ seatsFilled: []})
-        // this.setState({timeStamps: []})
     }
 
     updateTip(data,i){
