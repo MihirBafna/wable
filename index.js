@@ -6,6 +6,6 @@ app.get("/", (req,res) => {
     console.log("reacher");
     res.sendFile("./Wable-Server/wable-server-app/public/index.html")
 });
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
