@@ -5,9 +5,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   Link
 } from "react-router-dom";
-
+import PaymentPortal from './components/PaymentPortal';
 class App extends React.Component {
   render() {
     return(
@@ -20,7 +21,13 @@ class App extends React.Component {
             crossorigin="anonymous" />
     <Router>
       <NavBar />
-      <Route path="/" component={Menu} />
+      <Switch>
+      <Route exact path="/">
+        <Redirect to="/menu" />
+      </Route>
+      <Route path="/menu" component={Menu} />
+      <Route path="/paymentportal" component={PaymentPortal} />
+      </Switch>
     </Router>
 
       </div>

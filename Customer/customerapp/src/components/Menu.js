@@ -1,6 +1,7 @@
 import React from 'react';
 import menuData from './menu.json'
 import MenuItem from './MenuItem'
+import OrderFooter from './OrderFooter'
 import { Container, Row, Col, Breadcrumb, } from 'reactstrap';
 import '../css/MenuItem.css'
 
@@ -24,14 +25,15 @@ class Menu extends React.Component {
         items.push(
             <Container fluid>
                 <Row>
-                    <Col><h5 style={{paddingTop:"2vh", paddingLeft:"2vh"}}>Menu Item</h5></Col>
-                    <Col></Col>
-                    <Col><h5 style={{paddingTop:"2vh"}}>Description</h5></Col>
+                    <Col xs={2}><h5 style={{paddingTop:"2vh", paddingLeft:"2vh"}}>Menu Item</h5></Col>
+                    <Col xs={3}><h5 style={{paddingTop:"2vh"}}>Description</h5></Col>
                     <Col style={{textAlign:"right"}}>
                     <h5 style={{paddingTop:"2vh"}}>Price</h5>
                     </Col>
                     <Col xs="1"><h5 style={{paddingTop:"2vh", paddingRight:"2vh"}}>Qty.</h5>
                     </Col>
+                    <Col xs="1"></Col>
+
                 </Row>
                 <Row>
                     <Col>
@@ -50,8 +52,9 @@ class Menu extends React.Component {
             let itemCategory = lunchList[i].category;
             let itemDrop = lunchList[i].dropdown;
             let dropOptions = lunchList[i].options;
-            items.push(<MenuItem name={itemName} price={itemPrice} desc={itemDesc} category={itemCategory} dropdown={itemDrop} options={dropOptions}/>)
+            items.push(<MenuItem name={itemName} price={itemPrice} desc={itemDesc} category={itemCategory} dropdown={itemDrop} options={dropOptions} qty={0}/>)
             }
+        items.push(<OrderFooter />);           
         return items;
     }
 
