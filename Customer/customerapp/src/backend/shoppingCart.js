@@ -7,8 +7,20 @@ var fetch = require("node-fetch");
 id = '66979a6495414081ae5930389b1c60ff'
 // urlWanted = 'https://gateway-staging.ncrcloud.com/site/sites/'+id;
 let urlWanted = 'https://gateway-staging.ncrcloud.com/order/3/orders/1'
+let currDate = new Date
+let year = currDate.getUTCFullYear();
+let month = currDate.getUTCMonth();
+let day = currDate.getUTCDay();
+let hour = currDate.getUTCHours();
+let minute = currDate.getMinutes();
+let second = currDate.getSeconds();
+let z = currDate.getMilliseconds();
 
 async function postData(url = '', data = {}){
+    presetHeaders = {'Access-Control-Allow-Origin': '*',
+    'content-type':'application/json',
+    'nep-organization': 'ur-hack',
+    'nep-service-version': '2:1'}
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -16,20 +28,17 @@ async function postData(url = '', data = {}){
             'content-type':'application/json',
             'nep-organization': 'ur-hack',
             'nep-service-version': '2:1',
-            'Authorization':'AccessKey ' + HMACAuth.CalculateAccessKeyCredentials(response.headers)
-        },
-    })
-    .then(json)
-    .then((data) => {
-        console.log(data)
-    })
-    .catch((err) => {
-        console.log("Failed");
-    })
-
-}
+            'Authorization':'AccessKey ' + HMACAuth.CalculateAccessKeyCredentials(presetHeaders,currDate),
+            'Date': currDate.toISOString()
+        }})
+        console.log(currDate.toISOString());
+        return response.json();
+    }
 
 postData(urlWanted,{statusCode: 200})
+    .then(data => {
+        console.log(data);
+    })
   
 
 

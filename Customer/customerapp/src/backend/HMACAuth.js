@@ -1,19 +1,18 @@
-global.XMLHttpRequest = require('xhr2')
 var sha512 = require('crypto-js/sha512');
 var Base64 = require('crypto-js/enc-base64');
 
 // Calculate the access key credentials for a HTTP request
 let sharedKey = "c8abc04534714eb4ab2d884bf1b9f388"
 let secretKey = "923c9543fb2e47538a0ef6faae7c2e75"
-const CalculateAccessKeyCredentials = (headers) => {
-    console.log(headers)
+const CalculateAccessKeyCredentials = (preHeaders, date) => {
+    console.log(preHeaders)
     // Parse date string from HTTP Date header to a native representation
-    let requestDate = request._headers["Date"];
+    let requestDate = date
     // Generate one-time key to use for HMAC generation
     let key = uniqueKey(requestDate)
 
     // Get content to sign in the HMAC
-    let contentToSign = signableContent(request)
+    let contentToSign = signableContent(preHeaders)
 
     // Calculate the HMAC
     let hmac = sha512(contentToSign, key);
@@ -37,9 +36,9 @@ function uniqueKey(requestDate) {
     return secretKey + iso8601String
 }
 
-function signableContent(request) {
+function signableContent(preHeaders) {
     // HTTP method and path/query string are required parameters
-    let params = [request.Method, request.EscapedPathAndQueryString]
+    let params = preHeaders
 
     // All headers used in HMAC calculation
     let signableHeaders = [
@@ -54,12 +53,12 @@ function signableContent(request) {
     // Only include header values from the request in the signable content that are
     // sent in the HTTP request.
     for (signableHeader in signableHeaders) {
-        if (request._headers[signableHeader] != undefined) {
+        if (preHeaders[signableHeader] != undefined) {
             params.push(request.Headers.GetValue(signableHeader))
         }
     }
 
-    return params.join("\n")
+    return params
 }
 
 module.exports.CalculateAccessKeyCredentials = CalculateAccessKeyCredentials
