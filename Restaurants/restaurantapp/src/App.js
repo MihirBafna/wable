@@ -11,11 +11,11 @@ class App extends React.Component {
   constructor(props){
     super(props)
     var str = this.props.Name;
-    str = str.replace(/[^a-z0-9 ,.?!]/ig, '')
+    // str = str.replace(/[^a-z0-9 ,.?!]/ig, '')
     this.state = {
       restaurantName: str,
-      numSeats:this.props.Seats,
-      numTables:this.props.Tables,
+      numSeats:4,
+      numTables:4,
     }
     console.log(this.state.restaurantName)
   }

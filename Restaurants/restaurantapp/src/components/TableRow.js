@@ -10,7 +10,7 @@ class TableRow extends React.Component {
     render() {
         let row=[];
         for (var j = 0; j < this.props.cols; j++) {
-            row.push(<Col style={{ paddingLeft: "2vw" }}><Table /></Col>)
+            row.push(<Col style={{ paddingLeft: "2vw" }}><Table tablenumber={this.props.index1+j}/></Col>)
         }
         return (
             row

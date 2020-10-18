@@ -9,7 +9,7 @@ class TableView extends React.Component {
     render() {
         let tablegrid = [];
         for(var i=0;i<this.props.rows;i++){
-            tablegrid.push(<Row style={{paddingTop:"2vh"}}><TableRow cols={ this.props.cols}/></Row>)
+            tablegrid.push(<Row style={{paddingTop:"2vh"}}><TableRow index1={i} cols={ this.props.cols}/></Row>)
         }
         return (
             tablegrid
