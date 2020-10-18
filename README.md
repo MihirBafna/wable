@@ -1,6 +1,7 @@
 # wable
 wable is a web platform for restaurants to utilize QR codes at tables as a way to create a seamless, contactless experience for customers to order, reduce physical waste through online receipts, as well as provide data analytics as insights for restaurant owners.
-- Created during HackGT 2020, with NCR APIs.
+- Created with React.js, Node.js, NCR APIs, and hosted on a Microsoft Azure VM.
+- Created during HackGT 2020.
 
 
 ![](img/Server.png)
