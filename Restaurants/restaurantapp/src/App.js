@@ -8,6 +8,19 @@ import {
 } from 'react-router-dom';
 
 class App extends React.Component {
+  constructor(props){
+    super(props)
+    var str = this.props.Name;
+    var str = "anfjan7"
+    str = str.replace(/[^a-z0-9 ,.?!]/ig, '')
+    this.state = {
+      restaurantName: str,
+      numSeats:this.props.Seats,
+      numTables:this.props.Tables,
+    }
+    console.log(this.restaurantName)
+  }
+
   render() {
     return (
       <div className="App">

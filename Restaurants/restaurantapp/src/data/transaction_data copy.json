@@ -1,0 +1,276 @@
+{
+    "id": "7c11bf33-19f9-41b4-8155-16d4e7bc9a73",
+    "modelVersion": 1,
+    "siteInfo": {
+        "name": "My Store Name",
+        "id": "5",
+        "siteTimeZone": {
+            "timeZone": "America/New_York"
+        }
+    },
+    "transactionNumber": "12345",
+    "openDateTimeUtc": {
+        "dateTime": "2020-01-30T12:46:47Z",
+        "originalOffset": "-04:00"
+    },
+    "closeDateTimeUtc": {
+        "dateTime": "2020-01-30T13:06:39Z",
+        "originalOffset": "-04:00"
+    },
+    "touchPointId": "3",
+    "touchPointType": "POS",
+    "touchPointGroup": "Terminal",
+    "dataProviderName": "MyPOS",
+    "dataProviderVersion": "2.0",
+    "businessDay": {
+        "dateTime": "2020-01-30T00:00:00Z",
+        "originalOffset": "-04:00"
+    },
+    "isTrainingMode": false,
+    "linkedTransactions": [],
+    "tlog": {
+        "receiptId": "32111",
+        "location": {
+            "locationId": "5",
+            "location": "Table 5"
+        },
+        "revenueCenter": {
+            "id": "1",
+            "name": "Restaurant"
+        },
+        "isVoided": false,
+        "isSuspended": false,
+        "isResumed": false,
+        "isRecalled": false,
+        "isDeleted": false,
+        "transactionType": "SALES",
+        "localCurrency": {
+            "code": "USD"
+        },
+        "employees": [
+            {
+                "id": "1234",
+                "name": "John Snow",
+                "shiftId": "0",
+                "isTippableEmployee": true,
+                "roleId": "1",
+                "roleName": "Server"
+            }
+        ],
+        "totals": {
+            "taxInclusive": {
+                "amount": 0.0
+            },
+            "taxExclusive": {
+                "amount": 1.16
+            },
+            "returnItemsTaxInclusive": {
+                "amount": 0.0
+            },
+            "returnItemsTaxExclusive": {
+                "amount": 0.0
+            },
+            "taxExemptAmount": {
+                "amount": 0.0
+            },
+            "discountAmount": {
+                "amount": 0.0
+            },
+            "grossAmount": {
+                "amount": 13.0
+            },
+            "grandAmount": {
+                "amount": 14.16
+            },
+            "voidsAmount": {
+                "amount": 0.0
+            },
+            "grossReturnsAmount": {
+                "amount": 0.0
+            },
+            "netAmount": {
+                "amount": 13.0
+            }
+        },
+        "loyaltyAccount": [],
+        "totalTaxes": [
+            {
+                "id": "tax_12345_1",
+                "name": "Sales Tax",
+                "taxType": "TAX_EXCLUSIVE",
+                "taxableAmount": {
+                    "amount": 13.0
+                },
+                "amount": {
+                    "amount": 1.16
+                },
+                "isRefund": false,
+                "taxPercent": 0.09,
+                "isVoided": false
+            }
+        ],
+        "items": [
+            {
+                "id": "123456",
+                "productId": "1234",
+                "productName": "Pizza",
+                "variations": [],
+                "revenueCenter": {
+                    "id": "1",
+                    "name": "Restaurant"
+                },
+                "isReturn": false,
+                "isInventoryAffectedByReturn": false,
+                "isVoided": false,
+                "regularUnitPrice": {
+                    "amount": 13.0
+                },
+                "extendedUnitPrice": {
+                    "amount": 13.0
+                },
+                "actualUnitPrice": {
+                    "amount": 13.0
+                },
+                "extendedAmount": {
+                    "amount": 13.0
+                },
+                "actualAmount": {
+                    "amount": 13.0
+                },
+                "quantity": {
+                    "quantity": 1.0,
+                    "unitOfMeasurement": "PIECE"
+                },
+                "isWeighted": false,
+                "isOverridden": false,
+                "orderNumber": "1",
+                "itemPromotions": [],
+                "itemDiscounts": [],
+                "itemTaxes": [
+                    {
+                        "id": "tax_12345_1",
+                        "name": "Sales Tax",
+                        "taxType": "TAX_EXCLUSIVE",
+                        "taxableAmount": {
+                            "amount": 13.0
+                        },
+                        "amount": {
+                            "amount": 1.16
+                        },
+                        "isRefund": false,
+                        "taxPercent": 0.09,
+                        "isVoided": false
+                    }
+                ],
+                "category": {
+                    "id": "7",
+                    "name": "Food"
+                },
+                "surcharges": [],
+                "isNonSaleItem": false,
+                "itemSellType": "SALES",
+                "beginDateTimeUtc": {
+                    "dateTime": "2020-01-30T12:46:39Z",
+                    "originalOffset": "-04:00"
+                },
+                "endDateTimeUtc": {
+                    "dateTime": "2020-01-30T13:06:39Z",
+                    "originalOffset": "-04:00"
+                },
+                "entryMethod": "KEYED",
+                "isRefused": false,
+                "operatorBypassApprovals": [],
+                "employee": {
+                    "id": "1234",
+                    "name": "John Snow",
+                    "shiftId": "0",
+                    "isTippableEmployee": true,
+                    "roleId": "1",
+                    "roleName": "Server"
+                },
+                "isItemNotOnFile": false
+            }
+        ],
+        "orders": [
+            {
+                "orderNumber": "1",
+                "orderMode": {
+                    "id": "1",
+                    "name": "ORDER"
+                },
+                "orderChannel": "WALK_IN",
+                "orderSource": "POS"
+            }
+        ],
+        "tenders": [
+            {
+                "id": "12345",
+                "name": "Am Ex",
+                "type": "CREDIT_CARD",
+                "tenderAmount": {
+                    "amount": 14.16
+                },
+                "tipAmount": {
+                    "amount": 15.00
+                },
+                "usage": "PAYMENT",
+                "isVoided": false,
+                "cashDrawerId": "0",
+                "surcharges": [],
+                "cardLastFourDigits": "1234",
+                "employee": {
+                    "id": "1234",
+                    "name": "John Snow",
+                    "shiftId": "0",
+                    "isTippableEmployee": true,
+                    "roleId": "1",
+                    "roleName": "Server"
+                },
+                "authorizationCode": "APPROVE",
+                "lineNumber": 0,
+                "authorizationResponseTime": {
+                    "dateTime": "2020-01-30T13:06:39Z",
+                    "originalOffset": "-04:00"
+                },
+                "tenderAuthorization": {
+                    "authorizationCodeNumber": "12345",
+                    "referenceNumber": "1",
+                    "requestedAmount": {
+                        "amount": 14.16
+                    },
+                    "authorizationDateTime": {
+                        "dateTime": "2020-01-30T13:06:39Z",
+                        "originalOffset": "-04:00"
+                    },
+                    "authorizationType": "Online",
+                    "cardTypeId": "6",
+                    "paymentProvider": {
+                        "epsTerminalId": "123",
+                        "epsName": "Connected Payment",
+                        "responseCode": "123"
+                    },
+                    "isSignatureRequired": false,
+                    "isVerifiedByPIN": true,
+                    "isElectronicSignature": true
+                },
+                "tenderEndDateTime": {
+                    "dateTime": "2020-01-30T13:06:39Z",
+                    "originalOffset": "-04:00"
+                },
+                "nameOnCard": "Ellaria Sand",
+                "operatorBypassApprovals": []
+            }
+        ],
+        "transactionPromotions": [],
+        "transactionDiscounts": [],
+        "coupons": [],
+        "surcharges": [],
+        "customerCount": 2,
+        "checkOutType": "UNKNOWN",
+        "operatorBypassApprovals": [],
+        "isOpen": false
+    },
+    "transactionCategory": "SALE_OR_RETURN",
+    "isUpdated": false,
+    "transactionVersion": 0
+}
