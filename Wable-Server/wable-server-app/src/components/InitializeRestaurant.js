@@ -9,6 +9,7 @@ class InitializeRestaurant extends React.Component {
             NumTables:NaN,
             NumSeats:NaN,
             selectedFile: null,
+            jsonData: null
 
         }
     }
@@ -25,7 +26,9 @@ class InitializeRestaurant extends React.Component {
         fileReader.onload = e => {
             console.log("e.target.result", e.target.result);
             this.setState({ selectedFile: e.target.result });
+            this.setState({jsonData: JSON.parse(this.state.selectedFile)})
         };
+
     };
 
 
@@ -58,7 +61,7 @@ class InitializeRestaurant extends React.Component {
 
         axios({
             method: 'post',
-            url: '/tableview',
+            url: '/tableview/data',
             data: {
                 Name: this.state.Name,
                 Seats: this.state.Seats,
