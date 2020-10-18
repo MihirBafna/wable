@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Container, Jumbotron, Button } from 'reactstrap';
-import axios from "axios";
+import fetch from "fetch";
+import { Redirect } from 'react-router-dom';
 class InitializeRestaurant extends React.Component {
     constructor(props){
         super(props);
@@ -55,19 +56,26 @@ class InitializeRestaurant extends React.Component {
     }
 
     postToRx(){
+        var data = {
+            Name: this.state.Name,
+            Seats: this.state.NumSeats,
+            Tables: this.state.NumTables,
+        }
         console.log(this.state.Name);
         console.log(this.state.NumTables);
         console.log(this.state.NumSeats);
+        fetch("/tableview/data", {
+            method: "POST",
+            body: 'data'
+        }).then(this.handleRedirect(res))
 
-        axios({
-            method: 'post',
-            url: '/tableview/data',
-            data: {
-                Name: this.state.Name,
-                Seats: this.state.NumSeats,
-                Tables: this.state.NumTables,
-            }
-        });
+       function handleRedirect(res) {
+           if(res.status == 200){
+            <Redirect to="/getstarted"></Redirect>
+           }else{
+               console.log("error");
+           }
+        }
 
     }
 

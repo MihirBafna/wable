@@ -1,8 +1,9 @@
 import React from 'react';
 import InitializeRestaurant from './components/InitializeRestaurant';
+import GetStarted from './components/GetStarted'
 import {
   BrowserRouter as Router,
-  Route,
+  Route,Switch
 } from 'react-router-dom';
 import NavBar from './components/NavBar'
 
@@ -21,7 +22,10 @@ class App extends React.Component {
         </header>
         <Router>
           <NavBar />
+          <Switch>
           <Route path="/" component={InitializeRestaurant}></Route>
+          <Route path="/getstarted" component={GetStarted}></Route>
+          </Switch>
         </Router>
       </div>
     );
