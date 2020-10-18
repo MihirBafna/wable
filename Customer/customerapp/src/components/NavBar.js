@@ -14,7 +14,7 @@ const NavBar = (props) => {
     <div>
         <Navbar color = "light" light expand = "md" >
                 <NavbarBrand style={{ fontSize: "20x" }} href = "/"> < img src = { NCR } className = "App-logo" alt = "logo"
-                    width="70px" /> | wable<NavbarText style={{color:"#5DB2B2", fontSize:"20x"}} >-RX</NavbarText></NavbarBrand> 
+                    width="70px" /> | wable<NavbarText style={{color:"#5DB2B2", fontSize:"20x"}} >-CX</NavbarText></NavbarBrand> 
                 <NavbarBrand className="ml-auto" href="https://github.com/MihirBafna/wable"><img src={githublogo} className="App-logo" alt="logo"
             width="30px" /></NavbarBrand>
         </Navbar> 

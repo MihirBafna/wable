@@ -33,7 +33,7 @@ class MenuItem extends React.Component{
                 
                 <Col xs={3}> <p>{this.props.desc}
                 <div>
-                    <Button color="danger" onClick={toggle}>{"Description"}</Button>
+                    <Button color="danger" onClick={{toggle:'true'}}>{"Description"}</Button>
                     <Modal isOpen={modal} toggle={toggle} className={className}>
                     <ModalHeader toggle={toggle}>Modal title</ModalHeader>
                     <ModalBody>
