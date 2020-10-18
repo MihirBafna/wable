@@ -14,11 +14,13 @@ class MenuItem extends React.Component{
             <Container fluid>
 
             <Row style={{paddingTop:"5vh"}}>
-                <Col><h2>{this.props.name}</h2>
+                <Col><p>{this.props.name}</p>
                 
                 </Col>
                 <Col>
-                <MenuDropdown itemDrop={this.props.dropdown || {dropdown:"no"}} options={this.props.options || {options:['']} }/>
+                <MenuDropdown itemDrop={this.props.dropdown || {dropdown:"no"}} options={this.props.options || {options:['']} }>
+                </MenuDropdown>
+                
                 </Col>
                 <Col> <p>{this.props.desc}</p></Col>
                 <Col id="price"><h5>{this.props.price}</h5></Col>

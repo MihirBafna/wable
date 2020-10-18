@@ -20,16 +20,18 @@ class Menu extends React.Component {
         let items = []
         items.push(
             <Row>
-                <Col><p>Menu Item</p></Col>
+                <Col><h5 style={{paddingTop:"2vh", paddingLeft:"2vh"}}>Menu Item</h5></Col>
                 <Col></Col>
-                <Col><p>Description</p></Col>
-                <Col style={{textAlign:"right"}}><p>Price</p></Col>
-                <Col xs="1"><p>Qty.</p></Col>
+                <Col><h5 style={{paddingTop:"2vh"}}>Description</h5></Col>
+                <Col style={{textAlign:"right"}}>
+                <h5 style={{paddingTop:"2vh"}}>Price</h5>
+                </Col>
+                <Col xs="1"><h5 style={{paddingTop:"2vh", paddingRight:"2vh"}}>Qty.</h5></Col>
             </Row>
         )
         for(var i = 0; i < lunchList.length; i++) {
             let itemName = lunchList[i].name;
-            let itemPrice = lunchList[i].price;
+            let itemPrice = "$"+lunchList[i].price;
             let itemDesc = lunchList[i].desc;
             let itemCategory = lunchList[i].category;
             let itemDrop = lunchList[i].dropdown;

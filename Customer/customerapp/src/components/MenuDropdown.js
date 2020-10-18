@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-
-
+import dropdownimg from '../img/dropdown.png';
 
 class MenuDropdown extends React.Component{
     constructor(props){
@@ -28,7 +27,7 @@ class MenuDropdown extends React.Component{
         return this.state.active
     }
 
-       render(){
+       render(){        
            const dropdownOpen = this.state.dropdownOpen
         if(this.props.itemDrop == "yes"){
             let options = []
@@ -37,10 +36,13 @@ class MenuDropdown extends React.Component{
                 options.push(<DropdownItem onClick={() => this.handleChange(value)}>{value}</DropdownItem>)
             }
          return(   <Dropdown isOpen={this.state.dropdownOpen} size = "sm" toggle={this.toggle}>
-                <DropdownToggle>
+
+                <DropdownToggle  style={{backgroundColor: "white"}}>
+                <img src={dropdownimg} style={{width:"20px"}}></img>
                     {this.state.active}
                 </DropdownToggle>
                 <DropdownMenu>
+                    
                     {options}
                 </DropdownMenu>
             </Dropdown>
