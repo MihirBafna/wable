@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Container, Jumbotron, Button } from 'reactstrap';
-import fetch from "fetch";
-import { Redirect } from 'react-router-dom';
+// import fetch from 'fetch';
+import { Redirect , Link} from 'react-router-dom';
 class InitializeRestaurant extends React.Component {
     constructor(props){
         super(props);
@@ -60,21 +60,28 @@ class InitializeRestaurant extends React.Component {
             Name: this.state.Name,
             Seats: this.state.NumSeats,
             Tables: this.state.NumTables,
-        }
+        }        
+        // var QRCode = require('qrcode.react');
+        // var QRcode = [];
+        // for(var i=0;i<this.state.NumSeats;i++){
+        //     var str = "http://27cd2a8b805b.ngrok.io/menu?seatid=" + i.toString();
+        //     QRCode.push(<QRCode value={str}/>);
+        // }
+
         console.log(this.state.Name);
         console.log(this.state.NumTables);
         console.log(this.state.NumSeats);
         fetch("/tableview/data", {
             method: "POST",
             body: 'data'
-        }).then(this.handleRedirect(res))
+        }).then(response => response.json)
 
        function handleRedirect(res) {
-           if(res.status == 200){
-            <Redirect to="/getstarted"></Redirect>
-           }else{
-               console.log("error");
-           }
+        //    if(res.status == 200){
+        //     <Redirect to="/getstarted"></Redirect>
+        //    }else{
+        //        console.log("error");
+        //    }
         }
 
     }
@@ -103,6 +110,7 @@ class InitializeRestaurant extends React.Component {
                                 <Input type="file" name="file" id="exampleFile" value={this.state.selectedFile} onChange={this.onFileChange}/>
                             </FormGroup>
                             <Button type="submit" onClick={this.postToRx} style={{ borderColor: "#5DB2B2", backgroundColor: "#5DB2B2" }}>Submit</Button>
+                            <Link to="/sampleQR"><Button color="secondary" style={{marginLeft:"2vh"}}> Generated QR Codes</Button></Link>
                         </Form>
                     </Jumbotron>
                 </div>

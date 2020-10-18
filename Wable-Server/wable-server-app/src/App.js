@@ -1,6 +1,7 @@
 import React from 'react';
 import InitializeRestaurant from './components/InitializeRestaurant';
 import GetStarted from './components/GetStarted'
+import SampleQR from './components/SampleQR'
 import {
   BrowserRouter as Router,
   Route,Switch
@@ -23,8 +24,9 @@ class App extends React.Component {
         <Router>
           <NavBar />
           <Switch>
-          <Route path="/" component={InitializeRestaurant}></Route>
+          <Route exact path="/" component={InitializeRestaurant}></Route>
           <Route path="/getstarted" component={GetStarted}></Route>
+          <Route path="/sampleQR" component={SampleQR}></Route>
           </Switch>
         </Router>
       </div>
