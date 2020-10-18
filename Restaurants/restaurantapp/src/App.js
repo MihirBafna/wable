@@ -14,8 +14,8 @@ class App extends React.Component {
     // str = str.replace(/[^a-z0-9 ,.?!]/ig, '')
     this.state = {
       restaurantName: str,
-      numSeats:4,
-      numTables:4,
+      numSeats:40,
+      numTables:10,
     }
     console.log(this.state.restaurantName)
   }
