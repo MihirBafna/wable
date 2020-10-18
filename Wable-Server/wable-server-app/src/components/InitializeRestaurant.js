@@ -64,10 +64,11 @@ class InitializeRestaurant extends React.Component {
             url: '/tableview/data',
             data: {
                 Name: this.state.Name,
-                Seats: this.state.Seats,
-                Tables: this.state.Tables,
+                Seats: this.state.NumSeats,
+                Tables: this.state.NumTables,
             }
         });
+
     }
 
     render() {
