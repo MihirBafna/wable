@@ -7,6 +7,7 @@ var fetch = require("node-fetch");
 id = '66979a6495414081ae5930389b1c60ff'
 // urlWanted = 'https://gateway-staging.ncrcloud.com/site/sites/'+id;
 let urlWanted = 'https://gateway-staging.ncrcloud.com/order/3/orders/1'
+let query = ""
 let currDate = new Date
 let year = currDate.getUTCFullYear();
 let month = currDate.getUTCMonth();
@@ -30,18 +31,18 @@ str = strftime('%a, %d %b %Y %H:%M:%S %Z', currDate) // => 2011-06-07 18:51:45
 console.log(str);
 
 async function postData(url = '', data = {}){
-    presetHeaders = {'Access-Control-Allow-Origin': '*',
+    preHeaders = {'Access-Control-Allow-Origin': '*',
     'content-type':'application/json',
     'nep-organization': 'ur-hack',
     'nep-service-version': '2:1'}
     const response = await fetch(url, {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Access-Control-Allow-Origin': '*',
             'content-type':'application/json',
             'nep-organization': 'ur-hack',
             'nep-service-version': '2:1',
-            'Authorization':'AccessKey ' + HMACAuth.CalculateAccessKeyCredentials(presetHeaders,currDate),
+            'Authorization':'AccessKey ' + HMACAuth.CalculateAccessKeyCredentials(['GET', query],preHeaders, currDate),
             'Date': str
         }})
         console.log(currDate.toISOString());

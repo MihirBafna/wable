@@ -1,25 +1,26 @@
-var sha512 = require('crypto-js/sha512');
-var Base64 = require('crypto-js/enc-base64');
+var CryptoJS = require('crypto-js');
+
 
 // Calculate the access key credentials for a HTTP request
 let sharedKey = "c8abc04534714eb4ab2d884bf1b9f388"
 let secretKey = "923c9543fb2e47538a0ef6faae7c2e75"
-const CalculateAccessKeyCredentials = (preHeaders, date) => {
+const CalculateAccessKeyCredentials = (requestInfo,preHeaders, date) => {
     console.log(preHeaders)
     // Parse date string from HTTP Date header to a native representation
     let requestDate = date
+    console.log(requestDate)
     // Generate one-time key to use for HMAC generation
     let key = uniqueKey(requestDate)
 
     // Get content to sign in the HMAC
-    let contentToSign = signableContent(preHeaders)
+    let contentToSign = signableContent(preHeaders,requestInfo)
 
     // Calculate the HMAC
-    let hmac = sha512(contentToSign, key);
-
+    // let hmac = sha512(contentToSign, key);
+    let hmac = CryptoJS.SHA512(key,contentToSign)
     // Encode the HMAC in Base64 encoding (RFC 4648)
-    let encodedSignature = Base64.stringify(hmac);
-
+    // let encodedSignature = Base64.strub(hmac)
+    let encodedSignature = CryptoJS.enc.Base64.stringify(hmac)
     // Return the full credentials string for the HTTP Authorization header
     console.log(sharedKey + ":" + encodedSignature)
     return sharedKey + ":" + encodedSignature
@@ -33,12 +34,12 @@ function uniqueKey(requestDate) {
     let iso8601String = requestDate.toISOString();
 
     // Concat secret key with date string to generate one-time key for signing
-    return secretKey + iso8601String
+    return secretKey + iso8601String;
 }
 
-function signableContent(preHeaders) {
+function signableContent(preheaders,requestInfo) {
     // HTTP method and path/query string are required parameters
-    let params = preHeaders
+    let params = requestInfo
 
     // All headers used in HMAC calculation
     let signableHeaders = [
@@ -58,7 +59,7 @@ function signableContent(preHeaders) {
         }
     }
 
-    return params
+    return params.join("\n")
 }
 
 module.exports.CalculateAccessKeyCredentials = CalculateAccessKeyCredentials
