@@ -14,7 +14,20 @@ let day = currDate.getUTCDay();
 let hour = currDate.getUTCHours();
 let minute = currDate.getMinutes();
 let second = currDate.getSeconds();
-let z = currDate.getMilliseconds();
+let milli = currDate.getMilliseconds();
+let Z = "Z";
+if (hour<10) {
+    hour = "0"+hour.toString();
+}
+if (minute < 10) {
+    minute = "0" + minute.toString();
+}
+if (minute < 10) {
+    minute = "0" + minute.toString();
+}
+var strftime = require('strftime') // not required in browsers
+str = strftime('%a, %d %b %Y %H:%M:%S %Z', currDate) // => 2011-06-07 18:51:45
+console.log(str);
 
 async function postData(url = '', data = {}){
     presetHeaders = {'Access-Control-Allow-Origin': '*',
@@ -29,7 +42,7 @@ async function postData(url = '', data = {}){
             'nep-organization': 'ur-hack',
             'nep-service-version': '2:1',
             'Authorization':'AccessKey ' + HMACAuth.CalculateAccessKeyCredentials(presetHeaders,currDate),
-            'Date': currDate.toISOString()
+            'Date': str
         }})
         console.log(currDate.toISOString());
         return response.json();
